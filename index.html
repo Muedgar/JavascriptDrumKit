@@ -1,0 +1,205 @@
+<html>
+<head>
+   <title>JAVASCRIPT DRUM KIT</title>
+   <style>
+   body
+   {
+     margin: 0;
+     padding: 0;
+     background: cover;
+     background-image: url('./back.JPG');
+   }
+   .container
+   {
+     height: 100%;
+     width: auto;
+     margin: 0;
+     padding: 300px 0 0 10px;
+     display: flex;
+     background-color: #00000080;
+   }
+   .key
+   {
+     width: 100px;
+     height: 100px;
+     margin: 20px;
+     padding: 0;
+     border: 5px solid black;
+     border-radius: 5px;
+     background-color: #000000a3;
+   }
+   .key:focus
+   {
+     outline: none;
+   }
+   .label
+   {
+     font-size: 30px;
+     font-family: sans-serif;
+     font-weight: bolder;
+     color: white;
+     display: block;
+   }
+   .cap
+   {
+     font-size: 10px;
+     font-weight: bolder;
+     letter-spacing: 1.1;
+     color: #ffc600;
+     display: block;
+     padding: 10px 0 0 0;
+   }
+   .playing
+   {
+     transform: scale(1.1);
+     border-color: #ffc600;
+     box-shadow: 0 0 1rem #ffc600;
+   }
+
+   </style>
+</head>
+<body>
+   <div class="container">
+    <button id="one" class="key">
+      <span class="label">A</span><span class="cap">CLAP</span>
+    </button>
+    <button id="two" class="key"><span class="label">S</span><span class="cap">HIHAT</span></button>
+    <button id="three" class="key"><span class="label">D</span><span class="cap">KICK</span></button>
+    <button id="four" class="key"><span class="label">F</span><span class="cap">OPENHAT</span></button>
+    <button id="five" class="key"><span class="label">G</span><span class="cap">BOOM</span></button>
+    <button id="six" class="key"><span class="label">H</span><span class="cap">RIDE</span></button>
+    <button id="seven" class="key"><span class="label">J</span><span class="cap">SNARE</span></button>
+    <button id="eight" class="key"><span class="label">K</span><span class="cap">TOM</span></button>
+    <button id="nine" class="key"><span class="label">L</span><span class="cap">TINK</span></button>
+   </div>
+
+   <script>
+     window.onkeydown = function(e) {
+       var key = e.keyCode ? e.keyCode : e.which;
+
+       if (key == 65) {
+         // add style
+         var one = document.getElementById("one");
+         one.classList.add("playing");
+         // play sound
+         var audio = new Audio('./sounds/clap.wav');
+         audio.play();
+       }
+       if (key == 83) {
+         // add style
+         var two = document.getElementById("two");
+         two.classList.add("playing");
+         // play sound
+         var audio = new Audio('./sounds/hihat.wav');
+         audio.play();
+       }
+       if (key == 68) {
+         // add style
+         var three = document.getElementById("three");
+         three.classList.add("playing");
+         // play sound
+         var audio = new Audio('./sounds/kick.wav');
+         audio.play();
+       }
+       if (key == 70) {
+         // add style
+         var four = document.getElementById("four");
+         four.classList.add("playing");
+         // play sound
+         var audio = new Audio('./sounds/openhat.wav');
+         audio.play();
+       }
+       if (key == 71) {
+         // add style
+         var five = document.getElementById("five");
+         five.classList.add("playing");
+         // play sound
+         var audio = new Audio('./sounds/boom.wav');
+         audio.play();
+       }
+       if (key == 72) {
+         // add style
+         var six = document.getElementById("six");
+         six.classList.add("playing");
+         // play sound
+         var audio = new Audio('./sounds/ride.wav');
+         audio.play();
+       }
+       if (key == 74) {
+         // add style
+         var seven = document.getElementById("seven");
+         seven.classList.add("playing");
+         // play sound
+         var audio = new Audio('./sounds/snare.wav');
+         audio.play();
+       }
+       if (key == 75) {
+         // add style
+         var eight = document.getElementById("eight");
+         eight.classList.add("playing");
+         // play sound
+         var audio = new Audio('./sounds/tom.wav');
+         audio.play();
+       }
+       if (key == 76) {
+         // add style
+         var nine = document.getElementById("nine");
+         nine.classList.add("playing");
+         // play sound
+         var audio = new Audio('./sounds/tink.wav');
+         audio.play();
+       }
+     }
+     window.onkeyup = function(e) {
+       var key = e.keyCode ? e.keyCode : e.which;
+
+       if (key == 65) {
+         // add style
+         var one = document.getElementById("one");
+         one.classList.remove("playing");
+       }
+       if (key == 83) {
+         // add style
+         var two = document.getElementById("two");
+         two.classList.remove("playing");
+       }
+       if (key == 68) {
+         // add style
+         var three = document.getElementById("three");
+         three.classList.remove("playing");
+       }
+       if (key == 70) {
+         // add style
+         var four = document.getElementById("four");
+         four.classList.remove("playing");
+       }
+       if (key == 71) {
+         // add style
+         var five = document.getElementById("five");
+         five.classList.remove("playing");
+       }
+       if (key == 72) {
+         // add style
+         var six = document.getElementById("six");
+         six.classList.remove("playing");
+       }
+       if (key == 74) {
+         // add style
+         var seven = document.getElementById("seven");
+         seven.classList.remove("playing");
+       }
+       if (key == 75) {
+         // add style
+         var eight = document.getElementById("eight");
+         eight.classList.remove("playing");
+       }
+       if (key == 76) {
+         // add style
+         var nine = document.getElementById("nine");
+         nine.classList.remove("playing");
+       }
+     }
+
+   </script>
+</body>
+</html>
